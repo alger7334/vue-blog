@@ -1,10 +1,10 @@
 <template>
   <div class="list">
     <van-list v-model="loading" :finished="finished" finished-text="没有更多了" @load="onLoad">
-      <van-cell class="list-item" v-for="(item,index) in list" :key="index">
-        <div class="title">{{item.title}}</div>
-        <div class="time">{{item.time}}</div>
-      </van-cell>
+      <van-cell class="list-item" v-for="(item,index) in list" :key="index"  :title='item.title' :value="item.time" />
+        <!-- <div class="title">{{item.title}}</div>
+        <div class="time">{{item.time}}</div> -->
+      <!-- </van-cell> -->
     </van-list>
   </div>
 </template>
@@ -12,8 +12,10 @@
 import Vue from "vue";
 
 import { List } from "vant";
+import { Cell } from "vant";
 
 Vue.use(List);
+Vue.use(Cell);
 
 export default {
     props: {
@@ -68,13 +70,13 @@ export default {
     background #f7f7f7
 }
 .title
-    width 70%
+    width 50%
     float left
-    padding-left 15px
+    
 .time
     width 30%
     float right 
     text-align right 
-    padding-right 15px
+    
 </style>
 

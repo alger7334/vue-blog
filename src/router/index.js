@@ -5,6 +5,7 @@ import About from '../views/old/About.vue'
 import Index from '../views/index/Index.vue'
 import Essay from '../views/Essay/Essay.vue'
 import Code from '../views/Code/Code.vue'
+import Store from '../views/storeDemo/store.vue'
 
 Vue.use(VueRouter)
 
@@ -26,6 +27,10 @@ const routes = [{
     path: '/Code',
     name: 'Code',
     component: Code
+  },{
+    path: '/store',
+    name: 'Store',
+    component: Store
   }
 ]
 
