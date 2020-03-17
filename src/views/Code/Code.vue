@@ -7,10 +7,10 @@
         <List v-bind:msg="listMsgHtml" />
       </van-tab>
       <van-tab title="Css">
-  <List v-bind:msg="listMsgCss" />
+        <List v-bind:msg="listMsgCss" />
       </van-tab>
       <van-tab title="Js">
-       <List v-bind:msg="listMsgJs" />
+        <List v-bind:msg="listMsgJs" />
       </van-tab>
     </van-tabs>
   </div>
@@ -37,28 +37,28 @@ export default {
     return {
       active: 0,
       listMsgHtml: [
-        { title: "1111", time: "2020:2:22" },
-        { title: "1111", time: "2020:2:22" },
-        { title: "1111", time: "2020:2:22" },
-        { title: "1111", time: "2020:2:22" },
-        { title: "1111", time: "2020:2:22" },
-        { title: "1111", time: "2020:2:22" }
+        { id: "1", title: "1111", time: "2020:2:22" },
+        { id: "2", title: "1111", time: "2020:2:22" },
+        { id: "3", title: "1111", time: "2020:2:22" },
+        { id: "4", title: "1111", time: "2020:2:22" },
+        { id: "5", title: "1111", time: "2020:2:22" },
+        { id: "6", title: "1111", time: "2020:2:22" }
       ],
       listMsgCss: [
-        { title: "222", time: "2020:2:22" },
-        { title: "222", time: "2020:2:22" },
-        { title: "222", time: "2020:2:22" },
-        { title: "222", time: "2020:2:22" },
-        { title: "1111", time: "2020:2:22" },
-        { title: "1111", time: "2020:2:22" }
+        { id: "7", title: "222", time: "2020:2:22" },
+        { id: "8", title: "222", time: "2020:2:22" },
+        { id: "9", title: "222", time: "2020:2:22" },
+        { id: "13", title: "222", time: "2020:2:22" },
+        { id: "13", title: "1111", time: "2020:2:22" },
+        { id: "13", title: "1111", time: "2020:2:22" }
       ],
       listMsgJs: [
-        { title: "1133311", time: "2020:2:22" },
-        { title: "3333", time: "2020:2:22" },
-        { title: "333", time: "2020:2:22" },
-        { title: "333", time: "2020:2:22" },
-        { title: "1111", time: "2020:2:22" },
-        { title: "1111", time: "2020:2:22" }
+        { id: "21", title: "1133311", time: "2020:2:22" },
+        { id: "14", title: "3333", time: "2020:2:22" },
+        { id: "15", title: "333", time: "2020:2:22" },
+        { id: "16", title: "333", time: "2020:2:22" },
+        { id: "17", title: "1111", time: "2020:2:22" },
+        { id: "18", title: "1111", time: "2020:2:22" }
       ]
     };
   }

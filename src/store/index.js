@@ -5,6 +5,7 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+    incrementData:666,
     count3: 3,
     count2: 2,
     count: 0,
@@ -29,7 +30,7 @@ export default new Vuex.Store({
     }
   },
   mutations: {
-    // 处理状态
+    // 处理状态 只能同步进行修改数据
     changeCount(state, msg) {
       state.count += msg;
     },
@@ -38,12 +39,25 @@ export default new Vuex.Store({
     },
     changeCount3(state, msg) {
       state.count3 += msg;
+    },
+    increment(state){
+      state.incrementData += 1;
+
     }
   },
   actions: {
+    //actions 调用mutations 里的方法，可以异步进行
     increment (context) {
       context.commit('increment')
-    }
+    },
+    increment2 (commit) {
+      //另一种简化的写法
+      setTimeout(() => {
+        commit('increment')
+        //这里可以异步执行
+      }, 1000)
+    },
+    
   },
   modules: {}
 })

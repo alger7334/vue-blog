@@ -9,18 +9,26 @@
     <p>{{getTodoById(2)}}</p>
 
     <button @click="changeCount2(2)">count2 加2</button>
+    <p>
+      {{incrementData}}
+      <button @click="increment('increment改变之后的新文字')">increment改变</button>
+    </p>
   </div>
 </template>
 <script>
-import { mapState, mapGetters, mapMutations } from "vuex";
+import { mapState, mapGetters, mapMutations, mapActions } from "vuex";
 export default {
   name: "store1",
   computed: {
-    ...mapState(["count", "count2","count3"]),
+    ...mapState(["count", "count2", "count3", "incrementData"]),
     ...mapGetters(["doneTodos", "getTodoById"])
   },
   methods: {
-    ...mapMutations(["changeCount2"])
+    ...mapMutations(["changeCount2"]),
+    ...mapActions([
+      "increment"
+      // 将 `this.increment()` 映射为 `this.$store.dispatch('increment')`
+    ])
   }
 };
 </script>

@@ -1,10 +1,17 @@
 <template>
   <div class="list">
     <van-list v-model="loading" :finished="finished" finished-text="没有更多了" @load="onLoad">
-      <van-cell class="list-item" v-for="(item,index) in list" :key="index"  :title='item.title' :value="item.time" />
+      <van-cell class="list-item"
+       v-for="(item,index) in list" :key="index"  
+       :title='item.title' 
+       :value="item.time" 
+       :to="{ path: 'Content', query: { id: item.id }}"
+       />
+
         <!-- <div class="title">{{item.title}}</div>
         <div class="time">{{item.time}}</div> -->
       <!-- </van-cell> -->
+
     </van-list>
   </div>
 </template>
@@ -35,7 +42,7 @@ export default {
       setTimeout(() => {
         for (let i = 0; i < 10; i++) {
         //   this.list.push(this.list.length + 1);
-          this.list.push({ title: "这是文章的标题", time: "2020:2:21" });
+          this.list.push({ id:i,title: "这是文章的标题", time: "2020:2:21" });
         }
 
         // 加载状态结束

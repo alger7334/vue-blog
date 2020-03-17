@@ -5,6 +5,7 @@ import About from '../views/old/About.vue'
 import Index from '../views/index/Index.vue'
 import Essay from '../views/Essay/Essay.vue'
 import Code from '../views/Code/Code.vue'
+import Content from '../views/Content/Content.vue'
 import Store from '../views/storeDemo/store.vue'
 
 Vue.use(VueRouter)
@@ -15,7 +16,7 @@ const routes = [{
     component: Index
   },
   {
-    path: '/about',
+    path: '/About',
     name: 'About',
     component: About
   },
@@ -28,10 +29,16 @@ const routes = [{
     name: 'Code',
     component: Code
   },{
-    path: '/store',
+    path: '/Store',
     name: 'Store',
     component: Store
+  },{
+    path: '/Content',
+    name: 'Content',
+    component: Content
   }
+
+  
 ]
 
 const router = new VueRouter({
